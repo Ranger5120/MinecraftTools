@@ -8,7 +8,8 @@ function prepare()
     then
     mkdir -p /home/sever
     cd /home/sever
-    
+    wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.14.21.0.zip
+
     unzip bedrock-server-1.14.21.0.zip 
     fi
     cd
