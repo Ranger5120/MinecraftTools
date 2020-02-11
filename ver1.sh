@@ -1,10 +1,10 @@
 #!/bin/sh
 
 
-function prepare()
+ prepare()
 {
     
-    if [ ! -d "/home/sever" ]
+    if [ ! -f "/home/sever/whitelist.json" ]
     then
     mkdir -p /home/sever
     cd /home/sever
@@ -15,20 +15,20 @@ function prepare()
     cd
 }
 
-function StartSever()
+ StartSever()
 {
     LD_LIBRARY_PATH=. ./bedrock_server
 }
 
-function Properties()
+ Properties()
 {
     echo "==============================================="
     cd /home/sever 
-    vim sever.properties
+    vim server.properties
     main
 }
 
-function Whitelist()
+ Whitelist()
 {
     echo "==============================================="
     cd /home/sever
@@ -36,7 +36,7 @@ function Whitelist()
     main
 }
 
-function Permission()
+ Permission()
 {
     echo "==============================================="
     cd /home/sever
@@ -44,7 +44,7 @@ function Permission()
     main
 }
 
-function main()
+ main()
 {
     echo "==============================================="
     while :
